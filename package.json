@@ -1,0 +1,16 @@
+{
+  "name": "movie",
+  "version": "1.0.0",
+  "description": "simple moviestore app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "*",
+    "mongoose": "*"
+  },
+  "author": "Chan Ho Lun",
+  "license": "ISC"
+}
