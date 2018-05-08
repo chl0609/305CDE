@@ -1,0 +1,26 @@
+<a href="#!/movies">Go Back</a>
+<div class="panel panel-default" ng-init="getMovie()">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{movie.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="{{movie.image_url}}">
+      </div>
+      <div class="col-md-8">
+        <ul class="list-group">
+          <li class="list-group-item">Genre: {{movie.genre}}</li>
+          <li class="list-group-item">Director: {{movie.director}}</li>
+          <li class="list-group-item">Runtime: {{movie.runtime}}</li>
+          <li class="list-group-item">Description: {{movie.info}}</li>
+        </ul>
+        <a target="_blank" href="{{movie.detail_url}}" class="btn btn-primary">View on imdb</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pull-right">
+  <a href="#!/movies/edit/{{movie._id}}">Edit</a> |  <a href="#!" ng-click="removeMovie(movie._id)">Delete</a>
+  </div>

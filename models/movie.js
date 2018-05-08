@@ -20,6 +20,12 @@ var movieSchema = mongoose.Schema({
     runtime:{
         type: String
     },
+    image_url:{
+        type: String
+    },
+    detail_url:{
+        type: String
+    },
     create_date:{
         type: Date,
         default: Date.now
@@ -52,6 +58,8 @@ module.exports.updateMovie = function (id, movie, options, callback){
         info: movie.info,
         director: movie.director,
         runtime: movie.runtime,
+        image_url: movie.image_url,
+        detail_url: movie.detail_url,
     }
     Movie.findOneAndUpdate(query, update, options, callback);
 }
